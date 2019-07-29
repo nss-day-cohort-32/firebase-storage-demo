@@ -1,5 +1,6 @@
 import React from 'react';
 import { Header, Form, Grid, Button } from 'semantic-ui-react';
+import { saveProfile } from '../APIManager/profiles';
 
 class ProfileForm extends React.Component {
   state = {
@@ -8,7 +9,7 @@ class ProfileForm extends React.Component {
     photo: null
   };
 
-  saveProfile = () => {
+  submitForm = () => {
     console.log('Do Stuff');
   }
 
@@ -21,7 +22,7 @@ class ProfileForm extends React.Component {
         <Grid>
           <Grid.Row centered>
             <Grid.Column largeScreen={4} computer={6} tablet={8} mobile={12}>
-              <Form onSubmit={this.saveProfile}>
+              <Form onSubmit={this.submitForm}>
                 <Form.Field
                   control="input"
                   type="text"
