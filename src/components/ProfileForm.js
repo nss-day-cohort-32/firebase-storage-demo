@@ -1,6 +1,9 @@
 import React from 'react';
 import { Header, Form, Grid, Button } from 'semantic-ui-react';
 import { saveProfile } from '../APIManager/profiles';
+import * as firebase from 'firebase/app';
+import 'firebase/storage';
+
 
 class ProfileForm extends React.Component {
   state = {
@@ -9,8 +12,20 @@ class ProfileForm extends React.Component {
     photo: null
   };
 
+  storageRef = firebase.storage().ref('profile-images');
+
   submitForm = () => {
-    console.log('Do Stuff');
+    const ref = this.storageRef.child(this.state.username);
+
+    return ref.put(this.state.photo)
+      .then(data => data.ref.getDownloadURL())
+      .then(imageUrl => {
+        return saveProfile({
+          username: this.state.username,
+          about: this.state.aboutMe,
+          photoUrl: imageUrl
+        });
+      });
   }
 
   render() {
