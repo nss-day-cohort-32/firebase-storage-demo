@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'semantic-ui-css/semantic.min.css';
+import * as firebase from 'firebase/app';
+import { firebaseConfig } from './config/firebase';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

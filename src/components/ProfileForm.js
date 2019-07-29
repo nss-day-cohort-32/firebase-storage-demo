@@ -4,7 +4,8 @@ import { Header, Form, Grid, Button } from 'semantic-ui-react';
 class ProfileForm extends React.Component {
   state = {
     username: '',
-    aboutMe: ''
+    aboutMe: '',
+    photo: null
   };
 
   saveProfile = () => {
@@ -33,6 +34,11 @@ class ProfileForm extends React.Component {
                   label="About"
                   onChange={(e) => this.setState({ aboutMe: e.target.value })}
                   placeholder="About me" />
+                <Form.Field
+                  control="input"
+                  type="file"
+                  label="Photo"
+                  onChange={(e) => this.setState({ photo: e.target.files[0] })} />
                 <Button type="submit" content="Save" color="purple" />
               </Form>
             </Grid.Column>
