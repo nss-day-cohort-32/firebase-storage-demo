@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { Header, Form, Grid, Button } from 'semantic-ui-react';
 import { saveProfile } from '../APIManager/profiles';
 import * as firebase from 'firebase/app';
@@ -25,7 +26,8 @@ class ProfileForm extends React.Component {
           about: this.state.aboutMe,
           photoUrl: imageUrl
         });
-      });
+      })
+      .then(() => this.props.history.push('/'));
   }
 
   render() {
@@ -65,4 +67,4 @@ class ProfileForm extends React.Component {
   }
 }
 
-export default ProfileForm;
+export default withRouter(ProfileForm);
