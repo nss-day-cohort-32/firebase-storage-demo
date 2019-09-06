@@ -1,24 +1,36 @@
 {
-    "profiles": [
-        {
-            "username": "Brenda",
-            "about": "Brenda is an Instructor at the Nashville Software School",
-            "id": 1
-        },
-        {
-            "username": "Adam",
-            "about": "Adam is an Instructor at the Nashville Software School",
-            "id": 2
-        },
-        {
-            "username": "Bryan",
-            "about": "Bryan is a Junior Instructor at the Nashville Software School",
-            "id": 3
-        },
-        {
-            "username": "Robbie",
-            "about": "Robbie is a Teaching Assistand at the Nashville Software School",
-            "id": 4
-        }
-    ]
+  "profiles": [
+    {
+      "username": "Brenda",
+      "about": "Brenda is an Instructor at the Nashville Software School",
+      "id": 1
+    },
+    {
+      "username": "Adam",
+      "about": "Adam is an Instructor at the Nashville Software School",
+      "id": 2
+    },
+    {
+      "username": "Bryan",
+      "about": "Bryan is a Junior Instructor at the Nashville Software School",
+      "id": 3
+    },
+    {
+      "username": "Robbie",
+      "about": "Robbie is a Teaching Assistand at the Nashville Software School",
+      "id": 4
+    },
+    {
+      "username": "Andy",
+      "about": "Andy is the creator of the C# programming language",
+      "photoUrl": "https://firebasestorage.googleapis.com/v0/b/mystoragedemo34.appspot.com/o/images%2FAndy-1567782054542?alt=media&token=1938cc26-83a2-4e5c-8eb0-49afbc676a35",
+      "id": 5
+    },
+    {
+      "username": "Caroline",
+      "about": "Caroline mysteriously has the same last name as a certain instructor",
+      "photoUrl": "https://firebasestorage.googleapis.com/v0/b/mystoragedemo34.appspot.com/o/images%2FCaroline-1567782248464?alt=media&token=91a62e2e-c405-4825-9814-d97851fee172",
+      "id": 6
+    }
+  ]
 }
